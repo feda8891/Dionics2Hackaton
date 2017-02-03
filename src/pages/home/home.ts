@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 
-import { NavController, Platform, Events, Alert } from 'ionic-angular';
+import { NavController, Platform, Events, Alert, NavParams } from 'ionic-angular';
 import { NgZone } from '@angular/core';
 import { IBeacon, LocalNotifications } from 'ionic-native';
 // providers
@@ -8,6 +8,8 @@ import { BeaconProvider } from '../../providers/beacon-provider';
 
 // models
 import { BeaconModel } from '../../models/beacon-module';
+
+import { SelezionePercorsoPage } from "../selezione-percorso/selezione-percorso";
 
 @Component({
   selector: 'page-home',
@@ -64,6 +66,10 @@ export class HomePage {
             at: new Date(new Date().getTime() + 1000),
             sound: "res://platform_default"
         });
+    }
+
+    selezionePercorso(){
+    	this.navCtrl.push(SelezionePercorsoPage);
     }
 
 }
