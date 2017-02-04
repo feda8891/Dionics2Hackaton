@@ -10,6 +10,7 @@ import { BeaconProvider } from '../../providers/beacon-provider';
 import { BeaconModel } from '../../models/beacon-module';
 
 import { SelezionePercorsoPage } from "../selezione-percorso/selezione-percorso";
+import { Data } from '../../providers/data';
 
 @Component({
   selector: 'page-home',
@@ -20,11 +21,15 @@ export class HomePage {
 	beacons: BeaconModel[] = [];
 	zone: any;
 
-	constructor(public navCtrl: NavController, public platform: Platform, public beaconProvider: BeaconProvider, public events: Events) {
+    searchTerm: string = '';
+    items: any;
+
+	constructor(public navCtrl: NavController, public platform: Platform, public beaconProvider: BeaconProvider, public events: Events, public dataService: Data) {
 		this.zone = new NgZone({ enableLongStackTrace: false });
 	}
 
 	ionViewDidLoad() {
+		this.setFilteredItems();
 		this.platform.ready().then(() => {
 			this.beaconProvider.initialise().then((isInitialised) => {
 				if (isInitialised) {
@@ -58,6 +63,12 @@ export class HomePage {
 
 		});
 	}
+
+    setFilteredItems() {
+ 
+        this.items = this.dataService.filterItems(this.searchTerm);
+ 
+    }
 
 	public schedule() {
         LocalNotifications.schedule({

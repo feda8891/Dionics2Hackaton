@@ -4,6 +4,7 @@ import { MyApp } from './app.component';
 import { HomePage } from '../pages/home/home';
 import { SelezionePercorsoPage } from '../pages/selezione-percorso/selezione-percorso';
 import { BeaconProvider } from '../providers/beacon-provider';
+import { Data } from '../providers/data';
 
 @NgModule({
   declarations: [
@@ -20,6 +21,6 @@ import { BeaconProvider } from '../providers/beacon-provider';
     HomePage,
     SelezionePercorsoPage
   ],
-  providers: [{provide: ErrorHandler, useClass: IonicErrorHandler}, BeaconProvider]
+  providers: [{provide: ErrorHandler, useClass: IonicErrorHandler}, BeaconProvider, Data]
 })
 export class AppModule {}
