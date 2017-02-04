@@ -5,4 +5,46 @@ page-selezione-percorso {
 		display: inline-block; /* change the default display type to inline-block */
     	overflow: hidden;
 	}
+
+	.box-selezione-cuffie{
+		background-image:  linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url("../assets/img/cuffie.jpg");
+		background-size: 100% 100%;
+		color: white;
+		font-weight: bold;
+	}
+
+	.box-selezione-virtual{
+		background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url("../assets/img/oculus.jpg");
+		background-size: 100% 100%;
+		color: white;
+		font-weight: bold;
+	}
+
+	.box-selezione-video{
+		background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url("../assets/img/videogames.jpg");
+		background-size: 100% 100%;
+		color: white;
+		font-weight: bold;
+	}
+
+	.box-selezione-cuffie-selected{
+		background-image:  url("../assets/img/cuffie.jpg");
+		background-size: 100% 100%;
+		color: white;
+		font-weight: bold;
+	}
+
+	.box-selezione-virtual-selected{
+		background-image: url("../assets/img/oculus.jpg");
+		background-size: 100% 100%;
+		color: white;
+		font-weight: bold;
+	}
+
+	.box-selezione-video-selected{
+		background-image: url("../assets/img/videogames.jpg");
+		background-size: 100% 100%;
+		color: white;
+		font-weight: bold;
+	}
 }

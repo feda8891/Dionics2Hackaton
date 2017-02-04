@@ -30,16 +30,16 @@ export class HomePage {
 
 	ionViewDidLoad() {
 		this.setFilteredItems();
-		this.platform.ready().then(() => {
+		/*this.platform.ready().then(() => {
 			this.beaconProvider.initialise().then((isInitialised) => {
 				if (isInitialised) {
 					this.listenToBeaconEvents();
 				}
 			});
-		});
+		});*/
 	}
 
-	listenToBeaconEvents() {
+	/*listenToBeaconEvents() {
 		this.events.subscribe('didRangeBeaconsInRegion', (data) => {
 
 		// update the UI with the beacon list
@@ -62,7 +62,7 @@ export class HomePage {
 				
 
 		});
-	}
+	}*/
 
     setFilteredItems() {
  

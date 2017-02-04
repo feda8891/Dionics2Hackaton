@@ -3,6 +3,8 @@ import { IonicApp, IonicModule, IonicErrorHandler } from 'ionic-angular';
 import { MyApp } from './app.component';
 import { HomePage } from '../pages/home/home';
 import { SelezionePercorsoPage } from '../pages/selezione-percorso/selezione-percorso';
+import { EsploraIlMuseoPage } from "../pages/esplora-il-museo/esplora-il-museo";
+import {GiocondaPage} from "../pages/gioconda/gioconda";
 import { BeaconProvider } from '../providers/beacon-provider';
 import { Data } from '../providers/data';
 
@@ -10,7 +12,9 @@ import { Data } from '../providers/data';
   declarations: [
     MyApp,
     HomePage,
-    SelezionePercorsoPage
+    SelezionePercorsoPage,
+    EsploraIlMuseoPage,
+    GiocondaPage
   ],
   imports: [
     IonicModule.forRoot(MyApp)
@@ -19,7 +23,9 @@ import { Data } from '../providers/data';
   entryComponents: [
     MyApp,
     HomePage,
-    SelezionePercorsoPage
+    SelezionePercorsoPage,
+    EsploraIlMuseoPage,
+    GiocondaPage
   ],
   providers: [{provide: ErrorHandler, useClass: IonicErrorHandler}, BeaconProvider, Data]
 })

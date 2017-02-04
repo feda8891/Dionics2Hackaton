@@ -15,20 +15,36 @@
 
 <ion-content>
 <div style="height: 50%;">
-	<img class="img-class" src="./assets/img/louvre.jpg">
+	<img class="img-class" src="./assets/img/deloitte_digital.jpg"/>
 </div>
-<div style="height: 30%;">
+<div style="height: 33%;">
+<ion-row style="height: 100%; padding-top: 2px;">
+    <ion-col width-33 >
+    	<div style="height: 100%; text-align: center; font-size: 25px;" (click)="select(1)" [ngClass]="{'box-selezione-cuffie-selected':  selected == 1,'box-selezione-cuffie':  selected != 1 }"> <div style="padding-top: 50%;"> Audio </div>
+    	</div>
+    	
+    </ion-col>
+    <ion-col width-33 >
+    	<div (click)="select(2)" style="height: 100%; font-size: 25px;" [ngClass]="{'box-selezione-video-selected':  selected == 2,'box-selezione-video':  selected != 2 }"><div style="padding-top: 50%;text-align: center;"> Video & Games </div>
+    	</div>
+    </ion-col>
+    <ion-col width-33 >
+        	<div class="box-selezione-virtual" style="height: 100%;text-align: center; font-size: 25px;" (click)="select(3)" [ngClass]="{'box-selezione-virtual-selected':  selected == 3,'box-selezione-virtual':  selected != 3 }"><div style="padding-top: 50%;"> Virtual Reality </div>
+    		</div>
+    </ion-col>
+</ion-row>
 </div>
-<div style="height: 20%;">
+<div style="height: 17%;">
 	<ion-grid>
   <ion-row style="text-align: center;">
-    <ion-col width-50 style="font-size: 20px; color: black;">Total</ion-col>
-    <ion-col width-50 style="font-size: 20px; color: rgb(134,188,38);">39 €</ion-col>
+    <ion-col width-50 style="font-size: 20px; color: black;">Totale</ion-col>
+    <ion-col width-50 style="font-size: 20px; color: rgb(134,188,38);">{{total}} €</ion-col>
   </ion-row>
   <ion-row>
-    <ion-col width-100><button ion-button color="greenD">Inizia il viaggio</button></ion-col>
+    <ion-col width-100><button ion-button full color="greenD" (click)="iniziaViggio()">Inizia il viaggio</button></ion-col>
   </ion-row>
 	</ion-grid>
 </div>
+
 
 </ion-content>
