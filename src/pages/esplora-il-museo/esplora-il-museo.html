@@ -22,8 +22,8 @@
 
 
 <ion-content>
-<div [ngSwitch]="view">
-	<div *ngSwitchCase="naviga">
+<div style="height: 100%;" [ngSwitch]="view">
+	<div style="height: 100%;" *ngSwitchCase="'naviga'">
 		<div style="height: 100%;" class="background-esplora">
 
 			<div class="spinner">
@@ -35,14 +35,11 @@
 				<div class="text-navigation">Naviga nel Museo</div>
 
 			</div>
-
-
-
 		</div>
 	</div>
 
-	<div *ngSwitchCase="mappa">
-		<div style="height: 100%;" class="background-esplora">
+	<div style="height: 100%;" *ngSwitchCase="'mappa'">
+		<div style="height: 100%;" class="background-mappa">
 
 
 
@@ -50,6 +47,5 @@
 		</div>
 	</div>
 </div>
-
 
 </ion-content>
