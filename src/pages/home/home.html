@@ -1,112 +1,16 @@
 <ion-header>
   <ion-navbar color="black">
     <ion-title>
-      My Art
+      Cosa vorresti visitare?
     </ion-title>
   </ion-navbar>
 </ion-header>
 
 <ion-content class="card-background-page">
-    <ion-searchbar [(ngModel)]="searchTerm" (ionInput)="setFilteredItems()"></ion-searchbar>
-    <!--<ion-list>-->
-        <!--<ion-item *ngFor="let item of items">-->
-          <ion-card (click)="selezionePercorso()" *ngFor="let item of items">
-            <img class="mediumscreen" src="{{item.path}}"/>
-            <div class="card-title">{{item.title}}</div>
-            <div class="card-subtitle">{{item.subtitle}}</div>
-          </ion-card>
-          <!--<ion-card>
-            <img class="mediumscreen" src="./assets/img/british_museum.jpg"/>
-            <div class="card-title">British Museum</div>
-            <div class="card-subtitle">London</div>
-          </ion-card>
-          <ion-card>
-            <img class="mediumscreen" src="./assets/img/metropolitan.jpg"/>
-            <div class="card-title">Metropolitan Museum of Arts</div>
-            <div class="card-subtitle">New York</div>  
-          </ion-card>
-          <ion-card>
-            <img class="mediumscreen" src="./assets/img/vatican_museums.jpg"/>
-            <div class="card-title">Vatican Museums</div>
-            <div class="card-subtitle">Rome</div>
-          </ion-card>
-          <ion-card>
-            <img class="mediumscreen" src="./assets/img/acropolis_museum.jpg"/>
-            <div class="card-title">Acropolis Museum</div>
-            <div class="card-subtitle">Athens</div>
-          </ion-card>
-          <ion-card>
-            <img class="mediumscreen" src="./assets/img/uffizi_gallery.jpg"/>
-            <div class="card-title">Uffizi Gallery</div>
-            <div class="card-subtitle">Florence</div>
-          </ion-card>
-          <ion-card>
-          <img class="mediumscreen" src="./assets/img/rijksmuseum.jpg"/>
-            <div class="card-title">Rijksmuseum</div>
-            <div class="card-subtitle">Amsterdam</div>
-          </ion-card>
-          <ion-card>
-          <img class="mediumscreen" src="./assets/img/prado.jpg"/>
-            <div class="card-title">Prado</div>
-            <div class="card-subtitle">Madrid</div>
-          </ion-card>
-          <ion-card>
-          <img class="mediumscreen" src="./assets/img/deloitte_digital.jpg"/>
-            <div class="card-title">Deloitte Digital</div>
-            <div class="card-subtitle">Milan</div>
-          </ion-card>-->
-        <!--</ion-item>-->
-    <!--</ion-list>-->
+  <ion-searchbar [(ngModel)]="searchTerm" (ionInput)="setFilteredItems()"></ion-searchbar>
+    <ion-card (click)="selezionePercorso()" *ngFor="let item of items">
+    <img class="mediumscreen" src="{{item.path}}"/>
+    <div class="card-title">{{item.title}}</div>
+    <div class="card-subtitle">{{item.subtitle}}</div>
+  </ion-card>
 </ion-content>
-
-
-
-<!--<ion-content class="card-background-page">
-  
-  <ion-card (click)="selezionePercorso()">
-    <img class="mediumscreen" src="./assets/img/louvre.jpg"/>
-    <div class="card-title">Le Louvre</div>
-    <div class="card-subtitle">Paris</div>
-  </ion-card>
-  <ion-card>
-    <img class="mediumscreen" src="./assets/img/british_museum.jpg"/>
-    <div class="card-title">British Museum</div>
-    <div class="card-subtitle">London</div>
-  </ion-card>
-  <ion-card>
-    <img class="mediumscreen" src="./assets/img/metropolitan.jpg"/>
-    <div class="card-title">Metropolitan Museum of Arts</div>
-    <div class="card-subtitle">New York</div>  
-  </ion-card>
-  <ion-card>
-    <img class="mediumscreen" src="./assets/img/vatican_museums.jpg"/>
-    <div class="card-title">Vatican Museums</div>
-    <div class="card-subtitle">Rome</div>
-  </ion-card>
-  <ion-card>
-    <img class="mediumscreen" src="./assets/img/acropolis_museum.jpg"/>
-    <div class="card-title">Acropolis Museum</div>
-    <div class="card-subtitle">Athens</div>
-  </ion-card>
-  <ion-card>
-    <img class="mediumscreen" src="./assets/img/uffizi_gallery.jpg"/>
-    <div class="card-title">Uffizi Gallery</div>
-    <div class="card-subtitle">Florence</div>
-  </ion-card>
-  <ion-card>
-  <img class="mediumscreen" src="./assets/img/rijksmuseum.jpg"/>
-    <div class="card-title">Rijksmuseum</div>
-    <div class="card-subtitle">Amsterdam</div>
-  </ion-card>
-  <ion-card>
-  <img class="mediumscreen" src="./assets/img/prado.jpg"/>
-    <div class="card-title">Prado</div>
-    <div class="card-subtitle">Madrid</div>
-  </ion-card>
-  <ion-card>
-  <img class="mediumscreen" src="./assets/img/deloitte_digital.jpg"/>
-    <div class="card-title">Deloitte Digital</div>
-    <div class="card-subtitle">Milan</div>
-  </ion-card>
-</ion-content>-->
-
