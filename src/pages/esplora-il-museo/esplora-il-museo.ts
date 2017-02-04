@@ -25,9 +25,13 @@ export class EsploraIlMuseoPage {
 
 	beacons: BeaconModel[] = [];
 	zone: any;
+	faiPartire: boolean;
+	view : any;
 
   constructor(public navCtrl: NavController, public navParams: NavParams, public modalCtrl: ModalController, public beaconProvider: BeaconProvider, public events: Events, public platform: Platform) {
   	this.zone = new NgZone({ enableLongStackTrace: false });
+  	this.faiPartire = true;
+  	this.view = "naviga";
   }
 
   ionViewDidLoad() {
@@ -66,7 +70,11 @@ export class EsploraIlMuseoPage {
 
 			for (let i=0; i<this.beacons.length; i++)
 				if (this.beacons[i].major == 64966){
-					this.navCtrl.push(GiocondaPage);
+					if (this.faiPartire){
+						this.faiPartire = false;
+						this.navCtrl.push(GiocondaPage);
+
+					}
 				}
 
 			});

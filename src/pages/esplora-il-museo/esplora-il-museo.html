@@ -7,28 +7,49 @@
 <ion-header>
 
   <ion-navbar color="black">
-    <ion-title>Inizia ad esplorare</ion-title>
+  	<ion-title>Inizia ad esplorare</ion-title>
   </ion-navbar>
-
+  <ion-segment [(ngModel)]="view" color="greenD" style="background-color: black;">
+      <ion-segment-button value="naviga">
+        <ion-icon name="ios-navigate"></ion-icon>
+      </ion-segment-button>
+      <ion-segment-button value="mappa">
+        <ion-icon name="ios-map"></ion-icon>
+      </ion-segment-button>
+    </ion-segment>
 </ion-header>
 
 
+
 <ion-content>
+<div [ngSwitch]="view">
+	<div *ngSwitchCase="naviga">
+		<div style="height: 100%;" class="background-esplora">
 
-<div style="height: 100%;" class="background-esplora">
+			<div class="spinner">
+			  <div class="double-bounce1"></div>
+			  <div class="double-bounce2"></div>
+			</div>
 
-	<div class="spinner">
-	  <div class="double-bounce1"></div>
-	  <div class="double-bounce2"></div>
+			<div class="spinner" > 
+				<div class="text-navigation">Naviga nel Museo</div>
+
+			</div>
+
+
+
+		</div>
 	</div>
 
-	<div class="spinner" > 
-		<div class="text-navigation">Naviga nel Museo</div>
+	<div *ngSwitchCase="mappa">
+		<div style="height: 100%;" class="background-esplora">
 
+
+
+
+		</div>
 	</div>
-
-
-
 </div>
+
 
 </ion-content>

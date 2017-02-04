@@ -3,6 +3,8 @@ import { NavController, NavParams, LoadingController } from 'ionic-angular';
 
 import { EsploraIlMuseoPage } from "../esplora-il-museo/esplora-il-museo";
 
+import { TabsPage } from "../tabs/tabs";
+
 /*
   Generated class for the SelezionePercorso page.
 
